@@ -1,0 +1,36 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: verdana;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 100vh;
+	background: gray;
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+ul li{
+	list-style: none;
+	color:#fff;
+	font-size: 6em;
+	font-weight: bold;
+	letter-spacing: 10px;
+	filter: blur(1px);
+	transition: 4s;
+}
+ul li:hover,
+ul li:hover ~ li{ /* 取代符號~ 影響到下一個同階層的所有元素  */
+	transform: rotate(180deg) translateY(-200px);
+	transition: 2s;
+	filter: blur(20px); 
+	opacity: 0;
+}
+
+/* filter:blur 模糊效果; */
