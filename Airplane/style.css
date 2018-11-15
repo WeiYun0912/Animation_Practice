@@ -18,7 +18,7 @@ body{
 	box-shadow: inset 0 0 100px rgba(0,0,0,.8),
 	0 20px 100px rgba(0,0,0,0.8); /* 內陰影 */
 	overflow: hidden;
-	
+	z-index: 2;
 }
 
 .plane{
@@ -34,7 +34,7 @@ body{
 }
 
 .plane img{
-	z-index: 3;
+	z-index: 9999;
 }
 
 @keyframes animate-plane{
@@ -62,16 +62,21 @@ body{
 	top: 0;
 	left: 0;
 	opacity: .8;
-	z-index: 2;
+	z-index:-1;
 	animation: animate-cloud 1s linear infinite;
+}
+
+
+#cl{
+	z-index: 3;
 }
 
 @keyframes animate-cloud{
  0%{
- 	transform: translateX(400px);
+ 	transform: translateX(300px);
  }
  40%,100%{
- 	transform: translateX(-400px);
+ 	transform: translateX(-300px);
  }
 }
 
